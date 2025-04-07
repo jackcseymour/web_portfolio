@@ -1,5 +1,5 @@
 """
-Project 1: Sentiment Analysis with SVM
+Project 1: Sentiment Analysis & SVM Classification
 """
 
 import streamlit as st
@@ -11,8 +11,9 @@ def project1_details():
     """
     Render the detailed content for Project 1.
     """
-    # Get visualization image as base64
+    # Get visualization images as base64
     sentiment_viz = get_image_base64(config.SENTIMENT_VIZ_PATH)
+    movie_comparison_viz = get_image_base64(config.MOVIE_COMPARISON_VIZ_PATH)
 
     # Create metrics comparison table
     metrics_data = {
@@ -67,7 +68,7 @@ def project1_details():
             }
         </style>
 
-        <h2 class="project-title">Movie Review Sentiment Analysis with SVM</h2>
+        <h2 class="project-title">Movie Review Sentiment Analysis & SVM Classification</h2>
 
     """, unsafe_allow_html=True)
 
@@ -79,7 +80,7 @@ def project1_details():
         st.markdown("""
             <h3 class="section-title">Research Questions</h3>
             <div class="content-text">
-                • Can ML effectively perform <strong>sentiment analysis</strong> on movie reviews?<br>
+                • Can ML effectively perform <strong>sentiment classification</strong> on movie reviews?<br>
                 • How can model optimization maximize performance?<br>
                 • What neutral words appear frequently in reviews that tilt to positive or negative?<br>
                 • Which plot elements correlate with positive/negative sentiment?<br>
@@ -135,7 +136,90 @@ def project1_details():
             </div>
         """, unsafe_allow_html=True)
 
+    st.markdown("<h3 class='section-title'>Movie Comparison: Statistical Analysis</h3>", unsafe_allow_html=True)
+    
+    # Create movie comparison visualization
+    st.markdown(f"""
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 2rem 0;">
+            <img src="{movie_comparison_viz}" alt="Movie Comparison Analysis" style="width: 100%; height: auto;">
+            <p style="text-align: center; font-style: italic; margin-top: 1rem;">Sentiment Distribution Across Movies</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Movie metrics table
+    movie_metrics = {
+        'Movie': ['Pirate Radio', 'A Christmas Carol', 'The Men Who Stare at Goats', '2012'],
+        'Total Reviews': [181, 117, 193, 139],
+        'Positive %': ['91.71%', '81.20%', '65.80%', '21.58%'],
+        'Negative %': ['8.29%', '18.80%', '34.20%', '78.42%'],
+        'Positive/Negative Ratio': ['11.07', '4.32', '1.92', '0.28']
+    }
+    df_movies = pd.DataFrame(movie_metrics)
+    st.table(df_movies.style.set_properties(**{'text-align': 'center'}).hide(axis="index"))
+
+    # Statistical Analysis Results
+    col5, col6 = st.columns(2)
+
+    with col5:
+        st.markdown("""
+            <h4 class="section-title">Chi-Square Analysis</h4>
+            <div class="content-text">
+                <div class="key-takeaway">
+                    • Chi-square statistic: 188.4932<br>
+                    • p-value: < 0.00001<br>
+                    • Degrees of freedom: 3<br>
+                    • <strong>Conclusion:</strong> Statistically significant association between movie type and sentiment
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with col6:
+        st.markdown("""
+            <h4 class="section-title">Z-Test Comparisons</h4>
+            <div class="content-text">
+                <div class="key-takeaway">
+                    All pairwise comparisons showed statistically significant differences (p < 0.05) in positive review proportions
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # Statistical Insights
+    st.markdown("""
+        <h4 class="section-title">Key Statistical Insights</h4>
+        <div class="content-text">
+            <div class="key-takeaway">
+                • <strong>Movie Type Impact:</strong> Chi-square test confirms sentiment distribution varies significantly across movies
+            </div>
+            <div class="key-takeaway">
+                • <strong>Significant Differences:</strong> All pairwise comparisons show statistically meaningful differences in audience reception
+            </div>
+            <div class="key-takeaway">
+                • <strong>Clear Ranking:</strong><br>
+                1. Pirate Radio (91.71% positive)<br>
+                2. A Christmas Carol (81.20% positive)<br>
+                3. The Men Who Stare at Goats (65.80% positive)<br>
+                4. 2012 (21.58% positive)
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Business Implications
+    st.markdown("""
+        <h4 class="section-title">Business Insights</h4>
+        <div class="content-text">
+            <div class="key-takeaway">
+                • Strong statistical evidence supports pursuing projects similar to Pirate Radio
+            </div>
+                <div class="key-takeaway">
+                • Family-friendly content (Disney's A Christmas Carol) also shows strong positive sentiment
+            </div>
+            <div class="key-takeaway">
+                • Data suggests avoiding content similar to 2012's style and/or genre
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
 # For standalone testing
 if __name__ == "__main__":
-    st.title("Project 1: Sentiment Analysis with SVM")
+    st.title("Project 1: Sentiment Analysis & SVM Classification")
     project1_details()

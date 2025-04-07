@@ -16,6 +16,7 @@ INDUO_GIF_PATH = "assets/images/induo.gif"
 FRAUD_VIZ_PATH = "assets/images/proj2visualization.png"
 FRAUD_PRESENTATION_PATH = "assets/documents/fraud_detection_presentation.pdf"
 SENTIMENT_VIZ_PATH = "assets/images/sentiment_visualization.png"
+MOVIE_COMPARISON_VIZ_PATH = "assets/images/movie_comparison.png"
 
 # Contact information
 EMAIL = "jack.seymour@comcast.net"
@@ -58,8 +59,8 @@ ADDITIONAL_SKILLS = ["Data Analysis", "Databases", "Public Speaking", "Effective
 PROJECTS = [
     {
         "id": "sentiment-analysis-with-svm",
-        "title": "Sentiment Analysis with SVM",
-        "summary": "Analyzed movie reviews using Support Vector Machines with hyperparameter tuning."
+        "title": "Sentiment Data Analysis & SVM Classification",
+        "summary": "Analyzed movie reviews sentiments & performed classification using Support Vector Machines with hyperparameter tuning."
     },
     {
         "id": "fraud-detection",

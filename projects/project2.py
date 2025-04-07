@@ -10,8 +10,9 @@ def project2_details():
     """
     Render the detailed content for Project 2.
     """
-    # Get visualization image and presentation as base64
+    # Get visualization images
     fraud_viz = get_image_base64(config.FRAUD_VIZ_PATH)
+    movie_comparison_viz = get_image_base64(config.MOVIE_COMPARISON_VIZ_PATH)
     presentation_base64 = get_pdf_base64(config.FRAUD_PRESENTATION_PATH)
 
     # Custom CSS

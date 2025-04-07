@@ -1,7 +1,7 @@
 import streamlit as st
 
 def project1():
-    st.title("Sentiment Analysis with SVM")
+    st.title("Sentiment Data Analysis & SVM Classification")
     st.write("""
         Gathered and preprocessed 330 movie review tweets to create a labeled dataset for training.
         Tested sentiment classification with 70 held-out tweets, analyzing accuracy and misclassifications.
