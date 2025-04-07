@@ -1,0 +1,46 @@
+.button {
+  background-color: #1a202c;
+  color: #1c2120;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.button:hover {
+  background-color: #1c2120;
+  color: #1a202c;
+}
+
+.back-to-top-link {
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a202c;
+  text-decoration: none;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.back-to-top-link:hover {
+  background-color: #1a202c;
+  color: #1a202c;
+}
+
+.back-to-top-link svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #1a202c;
+  transition: fill 0.25s ease;
+}
+
+.back-to-top-link:hover svg {
+  fill: #1a202c;
+}

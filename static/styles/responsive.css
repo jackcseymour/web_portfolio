@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .projects-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .skills-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

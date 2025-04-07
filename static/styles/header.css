@@ -1,0 +1,23 @@
+.header {
+  background-color: #1a202c;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #fbd188;
+}

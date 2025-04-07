@@ -1,0 +1,125 @@
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f2f2f2; /* Light gray background */
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #1a202c;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.nav-links a:hover {
+  color: #fbd188; /* Highlight color */
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+.project-card a {
+  text-decoration: none;
+  color: #1a202c;
+  font-weight: bold;
+}
+.button {
+  background-color: #fbd188;
+  color: #1c2120;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.button:hover {
+  background-color: #1c2120;
+  color: #fbd188;
+}
+.back-to-top {
+  justify-content: center;
+  align-items: center;
+  background-color: #1a202c;
+  color: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+.back-to-top:hover {
+  background-color: #fbd188;
+  color: #1a202c;
+}
+@media (max-width: 768px) {
+  .projects-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Skills styles moved to skills.css */
+.individual-project-container {
+  /* Add your container styles here */
+}
+.individual-project-title {
+  margin-top: 50px;
+  text-align: center;
+}
+.individual-project-description {
+  margin-top: 50px;
+  text-align: center;
+}
+.back-to-top-link {
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbd188;
+  text-decoration: none;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+.back-to-top-link:hover {
+  background-color: #1a202c;
+  color: #fbd188;
+}
+.back-to-top-link svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #1a202c;
+  transition: fill 0.25s ease;
+}
+.back-to-top-link:hover svg {
+  fill: #fbd188;
+}
+
+/* ... rest of the CSS rules ... */

@@ -1,0 +1,37 @@
+x/* Add this at the top of the file */
+.block-container {
+  padding-left: 25% !important;
+  padding-right: 25% !important;
+  max-width: 75% !important;
+  color: #1a202c;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1a202c !important;
+}
+
+/* Keep your existing styles */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add media query for responsive design */
+@media (max-width: 768px) {
+  .block-container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
