@@ -79,22 +79,22 @@ def project2_details():
     """, unsafe_allow_html=True)
 
 
-    # Add embedded PDF viewer
-    st.markdown(f"""
-        <div style="display: flex; justify-content: center; margin: 20px 0;">
-            <iframe 
-                src="data:application/pdf;base64,{presentation_base64}" 
-                width="100%" 
-                height="500px" 
-                style="border: 1px solid #ccc; border-radius: 5px;">
-            </iframe>
-        </div>
-    """, unsafe_allow_html=True)
+    # # Add embedded PDF viewer
+    # st.markdown(f"""
+    #     <div style="display: flex; justify-content: center; margin: 20px 0;">
+    #         <iframe 
+    #             src="data:application/pdf;base64,{presentation_base64}" 
+    #             width="100%" 
+    #             height="500px" 
+    #             style="border: 1px solid #ccc; border-radius: 5px;">
+    #         </iframe>
+    #     </div>
+    # """, unsafe_allow_html=True)
 
     st.markdown("""
         <div class="highlight-box">
             <em><strong>Teaching Project in Machine Learning</strong></em><br>
-            Applied <strong>Gaussian Processes</strong> to a credit card fraud dataset, achieving 97% recall. Independently studied the topic and presented it to a Machine Learning class modeling the uncertainty and each predicted class probability with <strong>visualization</strong>.
+            Applied <strong>Gaussian Processes</strong> to a credit card fraud dataset, achieving 97% recall. Independently studied the topic and taught the concept to a Machine Learning class while modeling the uncertainty and each predicted class probability with <strong>visualization</strong>.
         </div>
     """, unsafe_allow_html=True)
 

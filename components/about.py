@@ -35,6 +35,9 @@ def render_about():
                     🌟 I am looking for roles that combine my <strong>technical knowledge</strong> with a <strong>creative industry</strong> to share stories with the world.
                 </p>
                 <p>
+                    🎵 I enjoy music, singing, dancing, yoga, and cooking.
+                </p>
+                <p>
                     🪧 You can reach me at <a href="mailto:{config.EMAIL}">{config.EMAIL}</a>.
                 </p>
                 <p>
