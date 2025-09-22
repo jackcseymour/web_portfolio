@@ -29,7 +29,7 @@ def render_about():
                     🎓 I am a recent <strong>Graduate</strong> ({config.GRADUATION_DATE}) from <strong>{config.UNIVERSITY}</strong>, studied <strong>{config.MAJOR}</strong> with a minor in <strong>{config.MINOR}</strong>.
                 </p>
                 <p>
-                    ❤️ I am passionate about <em>Machine Learning/Deep Learning, Data Science, Software Development, Artificial Intelligence, Data Analytics, Automation,</em> and more!
+                    ❤️ I am passionate about <em>Machine Learning, Project Management, Show Control, and Data Science!</em>
                 </p>
                 <p>
                     🌟 I am looking for roles that combine my <strong>technical knowledge</strong> with a <strong>creative industry</strong> to share stories with the world.
